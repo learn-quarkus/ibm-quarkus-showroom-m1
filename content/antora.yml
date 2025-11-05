@@ -1,5 +1,5 @@
 name: modules
-title: Default Title
+title: Basic Quarkus Hands-on Lab
 version: master
 nav:
   - modules/ROOT/nav.adoc
@@ -15,6 +15,15 @@ asciidoc:
     ssh_user: devops
     ssh_password: devops
     ssh_command: ssh someone@example.com
+    ROUTE_SUBDOMAIN: example.com
+    MASTER_URL: api.example.com
+    CONSOLE_URL: console-openshift-console.example.com
+    DS_URL: devspaces-openshift-devspaces.example.com
+    USER_ID: user1
+    DS_USER_NAME: userNN
+    DS_USER_PASSWORD: passNN
+    OPENSHIFT_USER_NAME: userNN
+    OPENSHIFT_USER_PASSWORD: passNN
     page-links:
     - url: https://redhat.com
       text: Red Hat
