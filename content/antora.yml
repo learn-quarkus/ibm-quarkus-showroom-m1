@@ -7,23 +7,23 @@ nav:
 asciidoc:
   attributes:
     # page-toclevels: -1               # <- This will remove the TOC that appear in the right sidebar at wider resolutions
-    lab_name: "I'm the lab_name var"
+    lab_name: "Basic Quarkus Hands-on Lab"
     release-version: master
     page-pagination: true # enables navigation at bottom of each instruction page.
     my_var: "foo"
     guid: my-guid
-    ssh_user: devops
-    ssh_password: devops
+    ssh_user: developer
+    ssh_password: developer
     ssh_command: ssh someone@example.com
     ROUTE_SUBDOMAIN: example.com
     MASTER_URL: api.example.com
     CONSOLE_URL: console-openshift-console.example.com
     DS_URL: devspaces-openshift-devspaces.example.com
-    USER_ID: user1
-    DS_USER_NAME: userNN
-    DS_USER_PASSWORD: passNN
-    OPENSHIFT_USER_NAME: userNN
-    OPENSHIFT_USER_PASSWORD: passNN
+    USER_ID: developer
+    DS_USER_NAME: developer
+    DS_USER_PASSWORD: quarkus
+    OPENSHIFT_USER_NAME: developer
+    OPENSHIFT_USER_PASSWORD: quarkus
     page-links:
     - url: https://redhat.com
       text: Red Hat
