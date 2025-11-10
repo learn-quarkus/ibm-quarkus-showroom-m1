@@ -25,5 +25,5 @@ asciidoc:
     OPENSHIFT_USER_NAME: developer
     OPENSHIFT_USER_PASSWORD: quarkus
     page-links:
-    - url: https://redhat.com
-      text: Red Hat
+    - url: https://ibm.com
+      text: IBM

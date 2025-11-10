@@ -45,7 +45,7 @@ image::login_with_openshift.png[login,800]
 Type in the following credentail:
 
 * *Username*: `{USER_ID}`
-* *Password*: `{DS_USER_PASSWORD}`
+* *Password*: `{OPENSHIFT_USER_PASSWORD}`
 
 image::che-login.png[login,800]
 
