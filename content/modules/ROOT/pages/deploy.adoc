@@ -61,7 +61,7 @@ you will see:
 
 Next, add the following variables in `src/main/resources/application.properties` for deploying the application to OpenShift. native compilation using `Mandrel` builder image:
 
-[source,sh,role="copypaste",subs=attributes+]
+[source,sh,role="execute",subs=attributes+]
 ----
 %prod.quarkus.kubernetes-client.trust-certs=true; <1>
 %prod.quarkus.kubernetes.deploy=true # <2>
