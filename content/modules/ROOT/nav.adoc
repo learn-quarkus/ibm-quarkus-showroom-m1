@@ -2,14 +2,24 @@
 * xref:dev-env.adoc[Access your Dev Environment]
 
 * xref:basics.adoc[The Basics]
-** xref:basics-dev-mode.adoc[Quarkus Dev Mode]
-** xref:basics-live-coding.adoc[Quarkus Live Coding]
-** xref:basics-package-app.adoc[Packaging the application]
+** xref:basics/dev-mode.adoc[Quarkus Dev Mode]
+** xref:basics/live-coding.adoc[Quarkus Live Coding]
+** xref:basics/package-app.adoc[Packaging the application]
 
 * xref:cdi.adoc[Dependency Injection]
 
 * xref:testing.adoc[Testing]
+
 * xref:debugging.adoc[Debugging in Dev Mode]
-* xref:native.adoc[Building Native Images]
+
+* xref:native-images.adoc[Building Native Images]
+
 * xref:cloudnative.adoc[Cloud Native]
+** xref:cloudnative/custom-data-healthcheck.adoc[Custom data in health checks]
+** xref:cloudnative/negative-healthcheck.adoc[Negative Health Checks]
+** xref:cloudnative/liveliness-readiness.adoc[Accessing Liveness and Readiness]
+** xref:cloudnative/eternal-config.adoc[Externalized Configuration]
+** xref:cloudnative/config-options.adoc[Quarkus Configuration options]
+
+
 * xref:deploy.adoc[Deploy to OpenShift]
