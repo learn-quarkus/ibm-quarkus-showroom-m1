@@ -98,7 +98,7 @@ As you can see health check procedures are defined as implementations of the `He
 There are two types of probes in Quarkus apps (and Kubernetes):
 
 * Liveness Probe - Many applications running for long periods of time eventually transition to broken states, and cannot recover except by being restarted. Kubernetes provides liveness probes to detect and remedy such situations. Restarting a container in such a state can help to make the application more available despite bugs.
-* Readiness Probe - Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup. In such cases, you don’t want to kill the application, but you don’t want to send it requests either. Kubernetes provides readiness probes to detect and mitigate these situations. A pod with containers reporting that they are not ready does not receive traffic through Kubernetes Services.
+* Readiness Probe - Sometimes, applications are temporarily unable to serve traffic. For example, an application might need to load large data or configuration files during startup, or depend on external services after startup. In such cases, you don't want to kill the application, but you don't want to send it requests either. Kubernetes provides readiness probes to detect and mitigate these situations. A pod with containers reporting that they are not ready does not receive traffic through Kubernetes Services.
 
 Readiness and liveness probes can be used in parallel for the same container. Using both can ensure that traffic does not reach a container that is not ready for it, and that containers are restarted when they fail. There are various https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/[Configuration Paramters^] you can set, such as the timeout period, frequency, and other parameters that can be tuned to expected application behavior.
 ====
@@ -126,13 +126,13 @@ The new health check procedure is now present in the `checks` array:
 ----
 
 
-Congratulations! You’ve created your first Quarkus health check procedure. Let’s continue by exploring what else can be done with the MicroProfile Health specification.
+Congratulations! You've created your first Quarkus health check procedure. Let's continue by exploring what else can be done with the MicroProfile Health specification.
 
 == Custom data in health checks
 
 In the previous step we created a simple health check with only the minimal attributes, namely, the health check name and its state (`UP` or `DOWN`). However, MicroProfile also provides a way for the applications to supply arbitrary data in the form of key/value pairs sent in the health check response. This can be done by using the `withData(key, value)`` method of the health check response builder API. This is useful to provide additional info about passing or failing health checks, to give some indication of the problem when failures are investigated.
 
-Let’s create our second health check procedure, a _Liveness_ probe. Create another Java class file in the `org.acme.people.health` package named `DataHealthCheck.java` with the following code:
+Let's create our second health check procedure, a _Liveness_ probe. Create another Java class file in the `org.acme.people.health` package named `DataHealthCheck.java` with the following code:
 
 [source, java, role="copypaste"]
 ----
@@ -265,7 +265,7 @@ And the returned content should begin with `"status": "DOWN"` and you should see
 ----
 
 == Fix Health Check
-We shouldn’t leave this application with a health check in DOWN state. Because we are running Quarkus dev mode, add this to to the end of the `src/main/resources/application.properties` file:
+We shouldn't leave this application with a health check in DOWN state. Because we are running Quarkus dev mode, add this to to the end of the `src/main/resources/application.properties` file:
 
 [source,properties, role="copypaste"]
 ----

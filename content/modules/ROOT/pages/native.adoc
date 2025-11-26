@@ -2,7 +2,7 @@
 :experimental:
 :imagesdir: images
 
-Let’s now produce a native executable for our application. It improves the startup time of the application, and produces a minimal disk and memory footprint. The executable would have everything to run the application including the "JVM" (shrunk to be just enough to run the application), and the application. This is accomplished using https://github.com/graalvm/mandrel[Mandrel^].
+Let's now produce a native executable for our application. It improves the startup time of the application, and produces a minimal disk and memory footprint. The executable would have everything to run the application including the "JVM" (shrunk to be just enough to run the application), and the application. This is accomplished using https://github.com/graalvm/mandrel[Mandrel^].
 
 Mandrel is a downstream distribution of the GraalVM community edition. Mandrel's main goal is to provide a native-image release specifically to support https://access.redhat.com/documentation/en-us/red_hat_build_of_quarkus[Quarkus^]. The aim is to align the native-image capabilities from GraalVM with OpenJDK and Red Hat Enterprise Linux libraries to improve maintainability for native Quarkus applications.
 
@@ -59,7 +59,7 @@ The output of the native build is a native Linux binary, which you can see using
 readelf -h target/*-runner
 ----
 
-you’ll see:
+you'll see:
 
 [source,none]
 ----
@@ -85,7 +85,7 @@ ELF Header:
   Section header string table index: 31
 ----
 
-It’s a binary that can only run on Linux, but as you’ll see in a moment, this native executable starts up very fast and takes up little memory.
+It's a binary that can only run on Linux, but as you'll see in a moment, this native executable starts up very fast and takes up little memory.
 
 == Run native image
 

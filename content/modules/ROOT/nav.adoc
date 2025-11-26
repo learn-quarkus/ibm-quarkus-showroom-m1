@@ -1,6 +1,5 @@
-* xref:intro.adoc[What is Quarkus?]
-** xref:intro.adoc#_click_to_copy[Click to Copy]
-** xref:intro.adoc#_access_your_development_environment[Dev Environment Access]
+* xref:intro.adoc[Navigating this guide]
+* xref:dev-env.adoc[Access you Dev Environment]
 * xref:basics.adoc[The Basics]
 * xref:cdi.adoc[Dependency Injection]
 * xref:testing.adoc[Testing]
