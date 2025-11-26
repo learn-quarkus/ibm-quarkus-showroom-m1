@@ -21,7 +21,7 @@ TIP:  If things get weird or your browser appears, you can simply reload the bro
 
 TIP: If you ever need to run commands that you don't see in a menu, you can press kbd:[F1] to open the command window, or the more traditional kbd:[Control+SHIFT+P] (or kbd:[Command+SHIFT+P] on macOS).
 
-== Explore Project
+== Explore the Project
 
 Let's take a look at the *Explorer* menu on the left hand of the IDE. Your Quarkus project was already imported when the workspace was created. 
 
@@ -76,6 +76,8 @@ Compared to vanilla JAX-RS, with Quarkus there is no need to create an `Applicat
 ====
 
 ## Run the Application in Quarkus Dev Mode
+
+Quarkus Dev Mode provides a powerful live coding experience. Any changes you make to your Java files or resource files will be automatically picked up and applied to the running application. This means you can see the effects of your changes immediately without having to restart the application.
 
 . Open the `application.properties` in the `src/main/resources` directory and append the following configuration to the file. This config allows you to access the https://quarkus.io/guides/dev-ui[Dev UI^] from the cloud IDE since the Dev UI is designed for running your localhost.
 +
@@ -148,77 +150,3 @@ curl http://localhost:8080/hello
 ----
 Hello from Quarkus REST
 ----
-
-== Exercise the Quarkus Live Coding capabilities
-
-Quarkus Dev Mode provides a powerful live coding experience. Any changes you make to your Java files or resource files will be automatically picked up and applied to the running application. This means you can see the effects of your changes immediately without having to restart the application.
-
-. In IDE, open the `GreetingResource.java` file in the *src/main/java/org/acme/people/rest* directory and change `return "Hello from Quarkus REST";` to `return "Hola from Quarkus REST";`. 
-. After making this change, reload the same brower tab that was showing `Hello from Quarkus REST`. It should now show `Hola from Quarkus REST`.
-
-Wow, how cool is that? Supersonic Subatomic live reload! Go ahead and change it a few more times and access the endpoint again. And we're just getting started. Leave the app running so we can continue to change it on the fly in the next section.
-
-[NOTE]
-====
-`mvn quarkus:dev` runs Quarkus in development mode. This enables live reload with background compilation, which means that when you modify your Java files your resource files and refresh your browser these changes will automatically take effect.
-====
-
-[NOTE]
-====
-This will also listen for a debugger on port `5005`. If you want to wait for the debugger to attach before running you can pass `-Ddebug` on the command line. If you don't want the debugger at all you can use `-Ddebug=false`. We'll use this later.
-====
-
-== Package the app
-
-Quarkus apps can be packaged as an executable JAR file or a native binary. We'll cover native binaries later, so for now, let's package as an executable JAR.
-
-. In the terminal , run the following Maven command (not in Quarkus Dev Mode):
-+
-[source,sh,role="copypaste"]
-----
-mvn clean package -DskipTests
-----
-
-. This produces an executable jar file in the `target/quarkus-app/` directory:
-+
-image::jar.png[jar,400]
-
-+
-NOTE: `quarkus-run.jar` - being an executable fast jar. Be aware that it's not an über-jar as the dependencies are copied into the `target/lib` directory.
-
-== Run the executable JAR
-
-. Run the following command in the terminal:
-+
-[source,sh,role="copypaste"]
-----
-java -Dquarkus.http.port=8081 -jar target/quarkus-app/quarkus-run.jar
-----
-+
-[NOTE]
-====
-We use `-Dquarkus.http.port=8081` to avoid conflicting with port `8080` used for Live Coding mode
-====
-
-. With the app running, open a new terminal window, and ensure the app _is_ running by executing a `curl` command:
-+
-[source, sh, role="copypaste"]
-----
-curl http://localhost:8081/hello
-----
-
-. You should see:
-+
-```console
-Hola from Quarkus REST
-```
-
-== Cleanup
-
-Go back to the terminal in which you ran the app with `java -jar` and stop the app by pressing kbd:[CTRL+C]. **Be sure not to close the "Start Live Coding" terminal!**
-
-== Congratulations!
-
-You've learnt how to build a basic app, package it as an executable JAR and start it up very quickly. The JAR file can be used like any other executable JAR file (e.g. running it as-is, packaging as a Linux container, etc.)
-
-In the next step we'll inject a custom bean to showcase Quarkus' CDI capabilities.
