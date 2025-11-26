@@ -1,6 +1,6 @@
 ---
 site:
-  title: Basic Quarkus Hands-on Lab
+  title: Quarkus Fundamentals Hands-on Lab
   url: https://redhat-scholars.github.io/course-template
   start_page: modules::index.adoc
 
