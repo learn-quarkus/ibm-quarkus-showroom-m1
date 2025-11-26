@@ -94,7 +94,7 @@ At this point, `len` is defined (and listed on the right side):
 
 image::len.png[length, 800]
 
-2.13.7.Final-redhat-00003 **Step Over** again, which executes the line to grab the last letter using `len` an offset to the `substring` method. See the bug? Look at the value of `lastLetter` in the variables list on the right - it's empty!
+* **Step Over** again, which executes the line to grab the last letter using `len` an offset to the `substring` method. See the bug? Look at the value of `lastLetter` in the variables list on the right - it's empty!
 
 We need to pass an offset that is one _before_ the end, to get the last letter.
 
