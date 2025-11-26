@@ -2,7 +2,7 @@
 
 == What is Quarkus?
 :experimental:
-:imagesdir: images
+:imagesdir: ../assets/images
 
 image::logo.png[quarkus-logo, 900]
 
