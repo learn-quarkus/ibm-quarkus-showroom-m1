@@ -1,4 +1,5 @@
-:imagesdir: ../assets/images
+:imagesdir: ../../assets/images
+
 == Exercise the Quarkus Live Coding capabilities
 
 Quarkus Dev Mode provides a powerful live coding experience. Any changes you make to your Java files or resource files will be automatically picked up and applied to the running application. This means you can see the effects of your changes immediately without having to restart the application.

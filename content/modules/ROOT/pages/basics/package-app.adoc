@@ -1,4 +1,5 @@
-:imagesdir: ../assets/images
+:imagesdir: ../../assets/images
+
 == Package the app
 
 Quarkus apps can be packaged as an executable JAR file or a native binary. We'll cover native binaries later, so for now, let's package as an executable JAR.
