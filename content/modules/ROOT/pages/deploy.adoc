@@ -4,8 +4,6 @@
 
 With our app fully ready for its first cloud native deployment, let's package it up for deployment to our Kubernetes platform as a native image. We'll use some OpenShift tooling to accomplish this, as outlined in the https://quarkus.io/guides/kubernetes-guide[Quarkus - Deploying on Kubernetes Guide^].
 
-OpenShift is a commercially supported distribution of Kubernetes from Red Hat. The platform is also available as open source, in the form of https://www.okd.io/[OKD^], the Origin Community Distribution of Kubernetes that powers Red Hat OpenShift.
-
 == Login to OpenShift
 
 Although your VS Code is running on the Kubernetes cluster, it's running with a default restricted _Service Account_ that prevents you from creating most resource types. So we'll log in with your workshop user. Execute the following command in the VS Code terminal:
@@ -21,12 +19,9 @@ You should see:
 ----
 Login successful.
 
-You have access to the following projects and can switch between them with 'oc project <projectname>':
+You have access to 89 projects, the list has been suppressed. You can list all projects with 'oc projects'
 
-  * {USER_ID}-devspaces
-    {USER_ID}-project
-
-Using project "user1-devspaces".
+Using project "devspaces-kube-admin-qyf6iq".
 Welcome! See 'oc help' to get started.
 ----
 
@@ -63,21 +58,21 @@ Next, add the following variables in `src/main/resources/application.properties`
 
 [source,properties,role="copypaste"]
 ----
-%prod.quarkus.kubernetes-client.trust-certs=true ; <1>
-%prod.quarkus.kubernetes.deploy=true # <2>
-%prod.quarkus.kubernetes.deployment-target=openshift // <3>
-%prod.quarkus.openshift.build-strategy=docker <4>
-%prod.quarkus.openshift.route.expose=true <5>
-%prod.quarkus.openshift.route.target-port=http <6>
-%prod.quarkus.openshift.route.tls.termination=edge <7>
-%prod.quarkus.openshift.route.tls.insecure-edge-termination-policy=Allow <8>
-quarkus.openshift.deployment-kind=Deployment <9>
-quarkus.container-image.group={USER_ID}-project <10>
-quarkus.container-image.registry=image-registry.openshift-image-registry.svc:5000 <11>
+%prod.quarkus.kubernetes-client.trust-certs=true<1>
+%prod.quarkus.kubernetes.deploy=true<2>
+%prod.quarkus.kubernetes.deployment-target=openshift<3>
+%prod.quarkus.openshift.build-strategy=docker<4>
+%prod.quarkus.openshift.route.expose=true<5>
+%prod.quarkus.openshift.route.target-port=http<6>
+%prod.quarkus.openshift.route.tls.termination=edge<7>
+%prod.quarkus.openshift.route.tls.insecure-edge-termination-policy=Allow<8>
+quarkus.openshift.deployment-kind=Deployment<9>
+quarkus.container-image.group=kubeadmin-project<10>
+quarkus.container-image.registry=image-registry.openshift-image-registry.svc:5000<11>
 ----
 <1> We are using self-signed certs in this simple example, so this simply says to the extension to trust them.
 <2> Instructs the extension to deploy to OpenShift after the container image is built
-<3> Instructs the extension to generate and create the OpenShift resources (like `DeploymentConfig` and `Service`) after building the container
+<3> Instructs the extension to generate and create the OpenShift resources (like `Deployment` and `Service`) after building the container
 <4> Set the Docker build strategy
 <5> Instructs the extension to generate an OpenShift `Route`
 <6> Specify the target port

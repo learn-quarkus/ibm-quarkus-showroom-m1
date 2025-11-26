@@ -1,15 +1,3 @@
-== First Step: Set Your Username!
-
-Look in the box at the top of your screen. Is your username set already? If so it will look like this:
-
-image::alreadyset.png[Set User ID above, 700]
-
-If your username is properly set, then you can move on. **If not, in the above box, enter the user ID you were assigned** like this:
-
-image::setuser.png[Set User ID above, 700]
-
-This will customize the links and copy/paste code for this workshop. If you accidently type the wrong username, just click the green recycle icon to reset it.
-
 == Click-to-Copy
 
 You will see various code and command blocks throughout these exercises which can be copy/pasted directly by clicking anywhere on the block of text:
@@ -42,7 +30,7 @@ To get started, {DS_URL}#https://github.com/learn-quarkus/ibm-quarkus-beginners-
 image::login_with_openshift.png[login,800]
 
 
-Type in the following credentail:
+Type in the following credentials:
 
 * *Username*: `{USER_ID}`
 * *Password*: `{OPENSHIFT_USER_PASSWORD}`
