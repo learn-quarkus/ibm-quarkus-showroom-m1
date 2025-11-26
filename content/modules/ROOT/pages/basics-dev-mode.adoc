@@ -1,4 +1,15 @@
 :imagesdir: ../assets/images
+== Quarkus Dev Mode - An Introduction
+
+
+Quarkus provides a dev mode which greatly aids during development by providing a number of features .n keeping with the mantra of providing developer joy. Some of the features include:
+
+* Live coding: Code -> refresh browser -> repeat. Code changes are automatically reflected in the running application. 
+* Dev UI: visualize and configure extensions as well as access to application logs and testing components
+* Dev Services: Automatic provisioning of unconfigured services such as databases, identity servers, and more.
+* Continuous Testing: Get instant feedback on code changes as tests run in the background on impacted code.
+
+
 == Run the Application in Quarkus Dev Mode
 
 . Open the `application.properties` in the `src/main/resources` directory and append the following configuration to the file. This config allows you to access the https://quarkus.io/guides/dev-ui[Dev UI^] from the cloud IDE since the Dev UI is designed for running your localhost.
