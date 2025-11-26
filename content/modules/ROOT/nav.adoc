@@ -1,4 +1,4 @@
-* xref:intro.adoc[Navigating this guide]
+* xref:intro.adoc[Navigating this lab]
 * xref:dev-env.adoc[Access your Dev Environment]
 
 * xref:basics.adoc[The Basics]

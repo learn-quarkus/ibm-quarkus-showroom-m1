@@ -1,5 +1,5 @@
 :imagesdir: ../assets/images
-= Navigating this Workshop Guide
+= Navigating this Lab
 
 
 == Click-to-Copy
