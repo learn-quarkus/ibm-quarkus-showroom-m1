@@ -2,7 +2,7 @@
 * xref:dev-env.adoc[Access your Dev Environment]
 
 * xref:basics.adoc[The Basics]
-** xref:basics-dev-mode.adoc[Running app in Quarkus Dev Mode]
+** xref:basics-dev-mode.adoc[Quarkus Dev Mode]
 ** xref:basics-live-coding.adoc[Quarkus Live Coding]
 ** xref:basics-package-app.adoc[Packaging the application]
 
