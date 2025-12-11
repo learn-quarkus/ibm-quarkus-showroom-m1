@@ -93,7 +93,7 @@ Since our environment here is Linux, you can _just run it_. Run the following co
 
 [source,sh,role="copypaste"]
 ----
-./target/people-1.0-SNAPSHOT-runner -Dquarkus.http.port=8081
+./target/people-1.0.0-SNAPSHOT-runner -Dquarkus.http.port=8081
 ----
 
 We use port `8081` here to avoid conflicting with our already-running development mode Quarkus app.
@@ -117,11 +117,11 @@ You should see something like:
 
 [source,none]
 ----
-    PID   RSS COMMAND
- 253312 46332 ./target/people-1.0-SNAPSHOT-runner -Dquarkus.http.port=8081
+PID   RSS     COMMAND
+7525  48120   ./target/people-1.0.0-SNAPSHOT-runner -Dquarkus.http.port=8081
 ----
 
-The actual process is taking around `46` MB of memory (https://en.wikipedia.org/wiki/Resident_set_size[Resident Set Size^], or RSS). Pretty compact!
+The actual process is taking around `48` MB of memory (https://en.wikipedia.org/wiki/Resident_set_size[Resident Set Size^], or RSS). Pretty compact!
 
 [NOTE]
 ====
