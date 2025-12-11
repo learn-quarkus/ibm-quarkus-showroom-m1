@@ -26,32 +26,27 @@ image::auth-access.png[auth-access, 800]
 +
 image::starting-workspace.png[ds, 800]
 +
-[NOTE]
-====
 
-* When prompted with *Do you trust the authors of this repository?* popup, select `Do not ask again for other repositories` to continue using your workspace.
+. When prompted with *Do you trust the authors of this repository?* popup, select `Do not ask again for other repositories` to continue using your workspace.
 +
 image::trust-author.png[ds, 800]
 
-* if prompted with this popup, choose `Start your workspace` to access your workspace
-
+. if prompted with this popup, choose `Start your workspace` to access your workspace
++
 image::starting-workspace-info.png[ds, 800]
-====
+
 
 . In a few seconds, you'll be placed in the workspace.
 +
 image::ds-workspace.png[ds, 800]
+.. Click on `Trust Publishers & Install` when prompted.
 +
-[NOTE]
-====
-* Click on `Trust Publishers & Install` when prompted.
-
 image::ds-trust-pub-popup.png[ds, 800]
 
-* And also click on `Yes, I trust the authors` as indicated below.
-
+.. And also click on `Yes, I trust the authors` as indicated below.
++
 image::ds-trust-popup.png[ds, 800]
-====
+
 
 . Keep this browser tab open throughout the course of this workshop. 
 +

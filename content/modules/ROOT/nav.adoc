@@ -9,6 +9,13 @@
 * xref:cdi.adoc[Dependency Injection]
 
 * xref:testing.adoc[Testing]
+** xref:testing/01-continuous-testing.adoc[Starting Continuous Testing]
+** xref:testing/02-control-continuous-testing.adoc[Controlling Continuous Testing]
+** xref:testing/03-devui-testing.adoc[Quarkus Dev UI for Testing]
+** xref:testing/04-inject-uri.adoc[Injecting a URI]
+** xref:testing/05-injection-into-tests.adoc[Injection into tests]
+** xref:testing/06-mock-support.adoc[Mock support ]
+
 
 * xref:debugging.adoc[Debugging in Dev Mode]
 
