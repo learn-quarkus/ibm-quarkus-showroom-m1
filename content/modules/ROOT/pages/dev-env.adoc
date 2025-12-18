@@ -10,8 +10,8 @@ image::login_with_openshift.png[login,800]
 
 . If prompted, login with the following credentials:
 
-.. *Username*: `{USER_ID}`
-.. *Password*: `{OPENSHIFT_USER_PASSWORD}`
+.. *Username*: `%USER_ID%`
+.. *Password*: `%PASSWORD%`
 +
 image::che-login.png[login,800]
 +
