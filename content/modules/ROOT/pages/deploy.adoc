@@ -127,7 +127,7 @@ hello quarkus-on-openshift
 Your hostname (the Kubernetes _pod_ in which your app runs) name will be different from the above.
 ====
 
-Now that your app is deployed to OpenShift you can also see it in the {CONSOLE_URL}[OpenShift Console^]. Login with `%USER_ID%/%PASSWORD%`
+Now that your app is deployed to OpenShift you can also see it in the https://console-openshift-console.{ROUTE_SUBDOMAIN}[OpenShift Console^]. Login with `%USER_ID%/%PASSWORD%`
 
 image::che-login.png[login,700]
 
