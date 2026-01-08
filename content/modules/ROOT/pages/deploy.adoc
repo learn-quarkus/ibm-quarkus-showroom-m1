@@ -6,12 +6,11 @@ With our app fully ready for its first cloud native deployment, let's package it
 
 == Login to OpenShift
 
-Although your VS Code is running on the Kubernetes cluster, it's running with a default restricted _Service Account_ that prevents you from creating most resource types. So we'll log in with your workshop user. Execute the following command in the VS Code terminal:
+Although your VS Code is running on the Kubernetes cluster, it's running with a default restricted _Service Account_ that prevents you from creating most resource types. So we'll log in with your workshop user.
 
-[source,sh,role="copypaste",subs="attributes"]
-----
-oc login -u {USER_ID} -p {OPENSHIFT_USER_PASSWORD} https://openshift.default.svc:443
-----
+1. First, https://oauth-openshift.{ROUTE_SUBDOMAIN}/oauth/token/request[generate a new openshift login token using your IBMid^]
+2. Click on `Display Token` to reveal your login token and an example `oc login` command.
+3. Copy the example `oc login` command, and paste it into your IDE terminal.
 
 You should see:
 
@@ -21,7 +20,7 @@ Login successful.
 
 You have access to 89 projects, the list has been suppressed. You can list all projects with 'oc projects'
 
-Using project "devspaces-kube-admin-qyf6iq".
+Using project "devspaces-{USER_ID}-xxxxxx".
 Welcome! See 'oc help' to get started.
 ----
 
@@ -67,7 +66,7 @@ Next, add the following variables in `src/main/resources/application.properties`
 %prod.quarkus.openshift.route.tls.termination=edge<7>
 %prod.quarkus.openshift.route.tls.insecure-edge-termination-policy=Allow<8>
 quarkus.openshift.deployment-kind=Deployment<9>
-quarkus.container-image.group=kubeadmin-project<10>
+quarkus.container-image.group=%USERID%-project<10>
 quarkus.container-image.registry=image-registry.openshift-image-registry.svc:5000<11>
 ----
 <1> We are using self-signed certs in this simple example, so this simply says to the extension to trust them.
@@ -127,9 +126,7 @@ hello quarkus-on-openshift
 Your hostname (the Kubernetes _pod_ in which your app runs) name will be different from the above.
 ====
 
-Now that your app is deployed to OpenShift you can also see it in the {CONSOLE_URL}[OpenShift Console^]. Login with `{USER_ID}/{OPENSHIFT_USER_PASSWORD}`
-
-image::che-login.png[login,700]
+Now that your app is deployed to OpenShift you can also see it in the https://console-openshift-console.{ROUTE_SUBDOMAIN}[OpenShift Console^]. Login to the openshift console using your IBMid.
 
 Once logged in, switch from the Administrator perspective to the Developer perspective using the dropdown menu at the top of the sidebar: 
 
