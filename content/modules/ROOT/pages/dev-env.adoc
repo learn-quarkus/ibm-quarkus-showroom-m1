@@ -8,12 +8,7 @@ You will use Visual Studio Code (VS Code) based on https://developers.redhat.com
 image::login_with_openshift.png[login,800]
 
 
-. If prompted, login with the following credentials:
-
-.. *Username*: `%USER_ID%`
-.. *Password*: `%PASSWORD%`
-+
-image::che-login.png[login,800]
+. When prompted, login using your IBMid
 +
 [NOTE]
 ====

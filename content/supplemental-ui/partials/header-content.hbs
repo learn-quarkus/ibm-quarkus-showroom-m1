@@ -1,17 +1,16 @@
 <header class="header">
   <script type="text/javascript">
 
-    document.addEventListener('DOMContentLoaded', function () { 
+    document.addEventListener('DOMContentLoaded', function () {
       const currentUrl = window.location.href;
       const urlParams = new URLSearchParams(window.location.search);
       const userId = urlParams.get('USER_ID');
-      const password = urlParams.get('PASSWORD');
 
       const subroute = currentUrl.split('?');
       const subdomain = subroute[0].replace(/^.*?apps\./, "apps.");
 
-      if (userId!=null && password!=null) {
-        showParams( userId, password);
+      if (userId!=null) {
+        showParams( userId );
       } else {
         document.getElementById('navbar-form-empty').style.display = "flex";
         document.getElementById('navbar-form-filled').style.display = "none";
@@ -19,30 +18,28 @@
     } );
 
 
-    function showParams( userId, password) {
+    function showParams( userId ) {
       document.getElementById('navbar-form-empty').style.display = "none";
       document.getElementById('navbar-form-filled').style.display = "flex";
       document.getElementById('userIdLabel').textContent = "USER ID: " + userId;
-      document.getElementById('passwordLabel').textContent = "PASSWORD: " + password;
+      document.body.innerHTML = document.body.innerHTML.replace(/%USERID%/g, userId.replaceAll("@","-").replaceAll(".","-").toLowerCase());
     }
 
-    
+
 
     function goWithCreds() {
       elUserId = document.getElementById('userId');
-      elPassword = document.getElementById('password');
-      window.location.search = ('USER_ID=' + elUserId.value + '&PASSWORD=' + elPassword.value);
+      window.location.search = ('USER_ID=' + elUserId.value);
     }
 
     function recycle() {
       document.getElementById('userId').value='';
-      document.getElementById('password').value='';
       window.location.search = ('');
     }
 
 
   </script>
-  
+
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://techzone.ibm.com" target="_blank" style="margin-left: 5%;">
@@ -63,29 +60,29 @@
   </nav>
   <div class="navbar-item" style="background-color: black;float:right">
     <div id="navbar-form-empty">
-        <span >
+        <span>
           <span>
             &nbsp;
             <i style="color: orange;" class="fa fa-exclamation-triangle" aria-hidden="true"></i>
           </span>
           Your Workshop Access
         <form action="javascript:void(0);">
-          <input size="20" id="userId" type="text" placeholder="USER ID"> &nbsp; <input size="20" id="password" type="text" placeholder="PASSWORD"> 
+          <input size="20" id="userId" type="text" placeholder="IBM USER ID">
           <button type="hidden" class="btn btn-sm" onclick="goWithCreds();">Set</button>
         </form>
         </span>
       </div>
 
-      <div  id="navbar-form-filled">
+      <div id="navbar-form-filled">
         <span>
         <span>
             Your Workshop Access:  <i alt="Clear details" title="Clear details" onclick="recycle();" style="color: green;" class="fa fa-recycle" aria-hidden="true"></i>
             <br>
             <span class="navbar-text" style="margin-left: 1rem; margin-right: 1rem;">
-              <span  id="userIdLabel"></span> <span  id="passwordLabel"></span> 
+              <span id="userIdLabel"></span>
             </span>
-            
-            
+
+
       </div>
   </div>
 </header>

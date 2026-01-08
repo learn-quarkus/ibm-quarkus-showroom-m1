@@ -17,6 +17,7 @@ asciidoc:
     ssh_command: ssh someone@example.com
     ROUTE_SUBDOMAIN: example.com
     MASTER_URL: api.example.com
+    USER_ID: "%USERID%"
     
     page-links:
     - url: https://ibm.com
