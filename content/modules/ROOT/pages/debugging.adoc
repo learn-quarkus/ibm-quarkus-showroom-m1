@@ -23,7 +23,7 @@ Open up the `GreetingResource.java` class again, and add another RESTful endpoin
     }
 ----
 
-A a bug has been reported where the last letter is not working. To reproduce the bug, try to retrieve the last letter of the string `Foo` by running this in a Terminal (your app should still be running - if it is not, use _Start Live Coding_ again):
+A bug has been reported where the last letter is not working. To reproduce the bug, try to retrieve the last letter of the string `Foo` by running this in a Terminal (your app should still be running - if it is not, use _Start Live Coding_ again):
 
 [source,sh,role="copypaste"]
 ----
@@ -52,7 +52,7 @@ image::debug-mode.png[debug-mode, 600]
 
 == Set a Breakpoint
 
-To debug the app, let's step through our function that has the bug. In the left gutter of the code, to the left of the line numbers, select once next to `int len = name.length();` to set a breakpoint and cause a red circle to appear:
+To debug the app, let's step through the function that has the bug. In the left gutter of the code, to the left of the line numbers, select once next to `int len = name.length();` to set a breakpoint and cause a red circle to appear:
 
 [NOTE]
 ====
@@ -94,7 +94,7 @@ At this point, `len` is defined (and listed on the right side):
 
 image::len.png[length, 800]
 
-* **Step Over** again, which executes the line to grab the last letter using `len` an offset to the `substring` method. See the bug? Look at the value of `lastLetter` in the variables list on the right - it's empty!
+* **Step Over** again, which executes the line to grab the last letter using `len` as an offset to the `substring` method. See the bug? Look at the value of `lastLetter` in the variables list on the right - it's empty!
 
 We need to pass an offset that is one _before_ the end, to get the last letter.
 

@@ -125,7 +125,7 @@ The actual process is taking around `48` MB of memory (https://en.wikipedia.org/
 
 [NOTE]
 ====
-The RSS and memory usage of any app, including Quarkus, will vary depending your specific environment, and will rise as the application experiences load.
+The RSS and memory usage of any app, including Quarkus, will vary depending on your specific environment, and will rise as the application experiences load.
 ====
 
 Make sure the app is still working as expected (we'll use `curl` this time to access it directly). In a new Terminal run:
@@ -150,4 +150,4 @@ Go to the Terminal in which you ran the native app and press kbd:[CTRL+C] to sto
 
 == Congratulations!
 
-You've now built a Java application as an executable JAR and a Linux native binary. We'll explore the benefits of native binaries later in when we start deploying to Kubernetes.
+You've now built a Java application as an executable JAR and a Linux native binary. We'll explore the benefits of native binaries later when we start deploying to Kubernetes.

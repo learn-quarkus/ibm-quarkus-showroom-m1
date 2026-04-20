@@ -31,7 +31,7 @@ Environment variables names are following the conversion rules of https://github
 
 === Configuration Profiles
 
-Quarkus supports the notion of configuration _profiles_. These allow you to have multiple configuration values in `application.properties` and select between then via a profile name.
+Quarkus supports the notion of configuration _profiles_. These allow you to have multiple configuration values in `application.properties` and select between them via a profile name.
 
 The syntax for this is `%\{profile}.config.key=value`. For example if I have the following: (do not copy this code!):
 
@@ -107,4 +107,4 @@ Stop the app that you ran with `java -jar` by pressing kbd:[CTRL+C] in the termi
 
 == Congratulations
 
-Cloud native encompasses much more than health probes and externalized config. With Quarkus' _container and Kubernetes-first philosophy_, excellent performance, support for many cloud native frameworks, it's a great place to build your next cloud native app.
+Cloud native encompasses much more than health probes and externalized config. With Quarkus' _container and Kubernetes-first philosophy_, excellent performance and support for many cloud native frameworks, it's a great place to build your next cloud native app.

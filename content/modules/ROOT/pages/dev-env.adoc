@@ -17,7 +17,7 @@ In case you see the *Authorize Access* page as below, select *Allow selected per
 image::auth-access.png[auth-access, 800]
 ====
 
-. The next page will display progess as devspaces is *Starting workspace quarkus-workshop*. It takes about *60* seconds to finish the process.
+. The next page will display progress as devspaces is *Starting workspace quarkus-workshop*. It takes about *60* seconds to finish the process.
 +
 image::starting-workspace.png[ds, 800]
 +
@@ -26,7 +26,7 @@ image::starting-workspace.png[ds, 800]
 +
 image::trust-author.png[ds, 800]
 
-. if prompted with this popup, choose `Start your workspace` to access your workspace
+. If prompted with this popup, choose `Start your workspace` to access your workspace
 +
 image::starting-workspace-info.png[ds, 800]
 

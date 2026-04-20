@@ -75,11 +75,11 @@ quarkus.container-image.registry=image-registry.openshift-image-registry.svc:500
 <4> Set the Docker build strategy
 <5> Instructs the extension to generate an OpenShift `Route`
 <6> Specify the target port
-<7> Spefify the termination type
-<8> Spefify the desired behavior for insecure connections to a route
+<7> Specify the termination type
+<8> Specify the desired behavior for insecure connections to a route
 <9> Generate the Deployment resource
 <10> Specify a project where the application is deployed
-<11> Sepcify an internal container registry to push an application image
+<11> Specify an internal container registry to push an application image
 
 *Docker build* strategy builds the artifacts (JAR files or a native executable) outside the OpenShift cluster, either locally or in a CI environment, and then provides them to the OpenShift build system together with a Dockerfile. The container is built inside the OpenShift cluster and provided as an image stream.
 
@@ -102,7 +102,7 @@ oc rollout status -w deployment/people
 
 Wait for that command to report `deployment "people" successfully rolled out` before continuing.
 
-And now we can access using `curl` once again. In the Terminal, run this command to access the endpoint:
+And now we can access it using `curl` once again. In the Terminal, run this command to access the endpoint:
 
 [source,sh,role="copypaste copypaste"]
 ----
@@ -154,7 +154,7 @@ image::podlogs.png[logs,800]
 
 This is the same output you saw earlier when you ran it "locally" with its super-fast startup time.
 
-Go back to the _Topology_ view. Since this app is exposed to the world, a _Route_ was created which you can access using the small arrow in the upper right of the circle. Select the route link:
+Go back to the _Topology_ view. Since this app is exposed to the world, a _Route_ was created which you can access it using the small arrow in the upper right of the circle. Select the route link:
 
 image::routelink.png[logs,600]
 
