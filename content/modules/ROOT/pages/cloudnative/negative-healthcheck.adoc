@@ -78,7 +78,7 @@ And the returned content should begin with `"status": "DOWN"` and you should see
 ----
 
 == Fix Health Check
-We shouldn't leave this application with a health check in DOWN state. Because we are running Quarkus dev mode, add this to to the end of the `src/main/resources/application.properties` file:
+We shouldn't leave this application with a health check in DOWN state. Because we are running Quarkus dev mode, add this to the end of the `src/main/resources/application.properties` file:
 
 [source,properties, role="copypaste"]
 ----

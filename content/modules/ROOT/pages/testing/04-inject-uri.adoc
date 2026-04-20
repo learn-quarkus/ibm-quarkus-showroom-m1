@@ -7,7 +7,7 @@ It is also possible to directly inject the URL into the test which can make it e
 
 Let's write a simple test that shows this off to load some static resources. First open the `test.html` file in *src/main/resources/META-INF/resources/*. 
 
-Append the folloing HTML code to the file:
+Append the following HTML code to the file:
 
 [source,html,role="copypaste"]
 ----
@@ -66,7 +66,7 @@ public class StaticContentTest {
     }
 }
 ----
-<1> The `@TestHTTPResource` annotation allows you to directly inject the URL of the Quarkus instance, the value of the annotation will be the path component of the URL. For now `@TestHTTPResource` allows you to inject URI, URL and String representations of the URL.
+<1> The `@TestHTTPResource` annotation allows you to directly inject the URL of the Quarkus instance; the value of the annotation will be the path component of the URL. For now `@TestHTTPResource` allows you to inject URI, URL and String representations of the URL.
 
 The test results will be updated automatically in the terminal:
 

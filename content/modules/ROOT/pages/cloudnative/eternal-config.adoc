@@ -100,7 +100,7 @@ Let's go to the Dev UI, then select `Configuration` on the left menu. Key `greet
 
 image::quarkus-devui-configeditor.png[quarkus-devui-configeditor, 700]
 
-Then, you will see the *Property greeting.message updated*. Make sure if the _application.properties_ file is updated automatically:
+Then, you will see the *Property greeting.message updated*. Make sure that the _application.properties_ file is updated automatically:
 
 image::quarkus-devui-configeditor-update2.png[quarkus-devui-configeditor, 700]
 
@@ -116,7 +116,7 @@ You should get `hi quarkus!`.
 
 === Update the test
 
-We also need to update the functional test to reflect the changes made to endpoint. Edit the `src/test/java/org/acme/people/GreetingResourceTest.java` file and change the content of the `testHelloEndpoint` method to:
+We also need to update the functional test to reflect the changes made to the endpoint. Edit the `src/test/java/org/acme/people/GreetingResourceTest.java` file and change the content of the `testHelloEndpoint` method to:
 
 [source,java,role="copypaste"]
 ----

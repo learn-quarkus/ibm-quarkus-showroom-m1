@@ -7,7 +7,7 @@
 +
 image::ct-resume.png[testshere, 800]
 
-. Press `r` to initate continuous testing. You should see the status change down the bottom of the screen as they are running, and it should finish with the following error:
+. Press `r` to initiate continuous testing. You should see the status change down the bottom of the screen as they are running, and it should finish with the following error:
 +
 image::ct-error.png[testshere, 800]
 

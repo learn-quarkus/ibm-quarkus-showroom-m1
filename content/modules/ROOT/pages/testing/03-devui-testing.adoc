@@ -9,6 +9,6 @@ Access the https://{USER_ID}-quarkus-workshop-index-webpage.{ROUTE_SUBDOMAIN}/q/
 
 image::quarkus-devui.png[devui-endpoint, 800]
 
-Select `Continuous Testing` on the left menu, you will that see 2 test cases passed with a green color.
+Select `Continuous Testing` on the left menu, you will see that 2 test cases passed with a green color.
 
 image::quarkus-devui-test-result.png[devui-endpoint, 800]
